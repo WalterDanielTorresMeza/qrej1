@@ -49,16 +49,22 @@ const FolioBienvenida = () => {
   }
 
   // Si tiene acceso y el ID es válido
-  return (
-    <div style={{ textAlign: 'center', marginTop: '5rem' }}>
-      <h1>✅ Bienvenido</h1>
-      {folio ? (
+return (
+  <div style={{ textAlign: 'center', marginTop: '5rem' }}>
+    {folio ? (
+      <>
+        <h1>✅ Bienvenido</h1>
         <p>Tu folio es: <strong>#{folio}</strong></p>
-      ) : (
-        <p>❌ Código inválido o manipulado</p>
-      )}
-    </div>
-  );
+      </>
+    ) : (
+      <>
+        <h1>❌ Código inválido o manipulado</h1>
+        <p>Por favor escanea un QR válido del evento.</p>
+      </>
+    )}
+  </div>
+);
+
 };
 
 export default FolioBienvenida;
